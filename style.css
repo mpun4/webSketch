@@ -7,24 +7,23 @@ body {
     display: flex;
     flex-direction: row;
     border: 2px solid black;
-    padding: 1px;
+    padding: 0;
     justify-content: space-between;
-    max-width: 720px;
+    max-width: 960px;
     flex-wrap: wrap;
-    margin: 30px 30px 20px;
+    margin: 22px 30px 20px;
     align-self: center;
 }
 
 .square {
     display: flex;
-    max-width: 200px;
-    padding: 20px;
-    border: 2px solid rebeccapurple;
+    padding: 29px;
+    border: 1px solid rebeccapurple;
 }
 
 button {
     display: flex;
     justify-self: flex-start;
     align-self: center;
-    margin: 40px 900px 0 300px;
+    margin: 40px 1000px 0 300px;
 }
