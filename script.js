@@ -26,11 +26,21 @@ function newPad(square) {
         {
             let newSquare = document.createElement("div");
             newSquare.setAttribute("class", "square");
-            newSquare.style.padding = `${squareSize}px`;
-            newSquare.addEventListener("mouseover", () => {
-            newSquare.style.backgroundColor = "#9bbceb";
+            newSquare.setAttribute("padding",`${squareSize}px`);
+            newSquare.addEventListener("mouseover", (e) => {
+            newSquare.style.backgroundColor = randomColor(e);
+            let opacity = Number(window.getComputedStyle(newSquare).getPropertyValue("opacity"));
+            if (opacity < 1)
+                newSquare.style.opacity = opacity + 0.1;
             });
             grid.appendChild(newSquare);
         }
     }
+}
+
+function randomColor(e) {
+    let red = Math.round(Math.random()*255);
+    let green = Math.round(Math.random()*255);
+    let blue = Math.round(Math.random()*255);
+    return `rgb(${red}, ${green}, ${blue})`;
 }
